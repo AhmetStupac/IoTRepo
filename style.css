@@ -203,6 +203,7 @@ input[type="checkbox"]:checked + .toggleLabel .onImage {
 .header h1 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(200, 238, 31);
+    margin-left: 200px;
 }
 
 #status{
