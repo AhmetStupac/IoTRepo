@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Stranica</title>
+</head>
+<body>
+    <div class="contentContainer">
+        <div class="header">
+         <h1>ReactToIT</h1>
+            <img src="/Slike/react_f.png" alt="ReactToIT" class="logo" />
+        </div>
+        <div class="container">
+            <p class="state">System state:</p>
+            <div class="sistemInfo">
+                <input type="checkbox" id="switch" checked />
+                <label for="switch" class="toggleLabel">
+                    <img src="/Slike/redb.png" alt="OFF" class="offImage" />
+                    <img src="/Slike/greenb.png" alt="ON" class="onImage" />
+                </label>
+            </div>
+
+
+            <p id="status">  Uređaj je ukljucen</p>
+
+            <div class="buttons">
+                <!-- <button class="dugmic dugmic1">Clock </button> -->
+                <div class="timerDropdown">
+                    <label for="timerSelect">Set Timer:</label>
+                    <select id="timerSelect">
+                        <option id="selectTime">Select time</option>
+                        <option value="1">30 minutes</option>
+                        <option value="60">1 hour</option>
+                        <option value="120">2 hours</option>
+                    </select>
+                </div>
+                <button class="dugmic dugmic2">Turn off the buzzer</button>
+                <!-- <button class="dugmic dugmic3">Toggle notifications</button> -->
+            </div>
+        </div>
+        <div class="notificationsContainer" id="taskovi"></div>
+    </div>
+  <script src="./script.js" type="module"></script>
+
+</body>
+</html>

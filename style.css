@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background-color: rgba(13, 77, 189, 0.659);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    transition: background-color 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/* start/off button */
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align both sections */
+    gap: 20px; /* Add space between sections */
+    padding: 20px;
+}
+
+/* Fix for the .sistemInfo section */
+.sistemInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Full width container */
+    max-width: 150px; /* Optional: Set a max width */
+    height: auto; /* Adjust height dynamically */
+    margin-bottom: 20px; /* Add spacing below the image section */
+}
+
+/* Button container */
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    gap: 10px; /* Space between buttons */
+    width: 100%; /* Full width container */
+}
+
+
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+.toggleLabel {
+    display: grid;
+    place-items: center;
+    width: 100%; /* Match parent width */
+    height: 100%; /* Match parent height */
+    cursor: pointer;
+}
+
+.offImage, .onImage {
+    grid-area: 1 / 1 / 2 / 2; /* Stack images on the same grid cell */
+    width: 100%; /* Scale the image to fit the container */
+    height: auto; /* Preserve aspect ratio */
+    transition: opacity 0.3s ease; /* Smooth transition for toggle effect */
+}
+
+/* Show OFF image when unchecked */
+input[type="checkbox"]:not(:checked) + .toggleLabel .offImage {
+    opacity: 1;
+    visibility: visible;
+}
+
+input[type="checkbox"]:not(:checked) + .toggleLabel .onImage {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Show ON image when checked */
+input[type="checkbox"]:checked + .toggleLabel .offImage {
+    opacity: 0;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked + .toggleLabel .onImage {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+/*  Dugmici */
+
+
+/* General button styles */
+
+.dugmic {
+    background-color: #007BFF; /* Primary button color */
+    color: #fff; /* Button text color */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Bold text */
+    padding: 10px 20px; /* Inner spacing */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dugmic:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.dugmic:active {
+    background-color: #003f7f; /* Even darker shade on click */
+    transform: scale(0.95); /* Shrink slightly on click */
+}
+
+/* Individual button styles */
+.dugmic1 {
+    background-color: #FF5733; /* Custom color for first button */
+}
+
+.dugmic1:hover {
+    background-color: #C44127; /* Hover effect for first button */
+}
+
+.dugmic2 {
+    background-color: #28A745; /* Custom color for second button */
+}
+
+.dugmic2:hover {
+    background-color: #1E7A33; /* Hover effect for second button */
+}
+
+.dugmic3 {
+    background-color: #FFC107; /* Custom color for third button */
+    color: #000; /* Black text for contrast */
+}
+
+.dugmic3:hover {
+    background-color: #E0A800; /* Hover effect for third button */
+}
+
+/* timer */
+.timerDropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timerDropdown label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.timerDropdown select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #007BFF;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.timerDropdown select:hover {
+    border-color: #0056b3;
+}
+
+@media (min-width: 600px) {
+    .buttons {
+        flex-direction: row; /* Arrange buttons horizontally on larger screens */
+    }
+}
+
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 250px;
+}
+
+.header h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(200, 238, 31);
+}
+
+#status{
+    color: white;
+}
+
+.state{
+    color: rgb(200, 238, 31);
+    font-size: 20px;
+}
